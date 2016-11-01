@@ -2,8 +2,6 @@
 
 let currStep = m.prop(0);
 
-// setInterval(() => console.log(currStep()), 500);
-
 function bgp(currStep, steps, frames) {
     let div = 100 / (frames - 1),
         per = (currStep/steps) * 100 + div / 2,
@@ -20,7 +18,7 @@ const frames = 10,
                 m("div", {
                     class : "viewer",
                     style : {
-                        backgroundImage : "url(/img/1-0.png)",
+                        backgroundImage : "url(img/1-0.png)",
                         backgroundPosition : bgp(currStep(), steps, frames)
                     }
                 }),
