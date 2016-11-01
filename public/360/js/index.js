@@ -7,10 +7,11 @@ function bgp(currStep, steps, frames) {
         per = (currStep/steps) * 100 + div / 2,
         num = Math.floor(per / div) * div;
 
-    return `${num}% 0`;
+    return `0 ${num}%`;
 }
 
-const frames = 10,
+const bg     = "img/shoe-16.jpg",
+    frames   = 16,
     steps    = 50,
     comp     = {
         view : (ctrl) => {
@@ -18,7 +19,7 @@ const frames = 10,
                 m("div", {
                     class : "viewer",
                     style : {
-                        backgroundImage : "url(img/1-0.png)",
+                        backgroundImage : `url(${bg})`,
                         backgroundPosition : bgp(currStep(), steps, frames)
                     }
                 }),

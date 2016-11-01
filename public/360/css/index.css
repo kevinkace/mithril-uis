@@ -1,13 +1,12 @@
 .container {
-    width: 400px;
-    background: red;
+    width: 580px;
 }
 
 .viewer {
-    height: 400px;
+    height: 300px;
 
-    background: green no-repeat;
-    background-size: 1000% auto;
+    background: transparent no-repeat;
+    background-size: auto 1600%;
 }
 
 .range {
