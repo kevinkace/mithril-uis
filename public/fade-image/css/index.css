@@ -1,0 +1,25 @@
+span {
+    display: inline-block;
+    background-size: 100%;
+}
+
+span,
+img {
+    display: block;
+    width: 100%;
+}
+
+.fadeIn {
+    animation-duration: 0.5s;
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    0%,
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
