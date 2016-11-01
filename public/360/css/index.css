@@ -1,0 +1,17 @@
+.container {
+    width: 400px;
+    background: red;
+}
+
+.viewer {
+    height: 400px;
+
+    background: green no-repeat;
+    background-size: 1000% auto;
+}
+
+.range {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
