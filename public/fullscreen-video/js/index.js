@@ -12,12 +12,14 @@ const fullscreenVideo = {
             vnode.state.fullscreen = vnode.state.fullscreen.bind(null, vnode);
         },
         view : (vnode) =>
-            m("button", {
-                onclick : (e) => {
-                    vnode.state.fullscreen(true);
-                },
-                class : vnode.state.fullscreen() ? "fullscreen" : ""
-            }, "play")
+            m("span", { class : vnode.state.fullscreen() ? "fullscreen" : "" },
+                m("button", {
+                    class : vnode.state.fullscreen() ? "fullscreen" : "",
+                    onclick : (e) => {
+                        vnode.state.fullscreen(true);
+                    }
+                }, "play")
+            )
     };
 
 m.mount(document.body, fullscreenVideo);

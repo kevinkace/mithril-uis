@@ -9,6 +9,39 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    position: relative;
+}
+
+span.fullscreen {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    animation: 0.4s fs forwards ease-in;
+}
+
+@keyframes fs {
+    0% {
+        width: 6em;
+        height: 6em;
+        border-radius: 50%;
+        background: transparent;
+    }
+    50% {
+        background: black;
+    }
+    75% {
+        width: 100%;
+        height: 100%;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        border-color: black;
+        border-radius: 0;
+        background: black;
+    }
 }
 
 button {
@@ -16,29 +49,30 @@ button {
     height: 6em;
 
     border-radius: 50%;
-    border: solid 3px red;
+    border: solid 3px rgba(255, 0, 0, 0.5);
     background: transparent;
 
     font-size: 2em;
 
     cursor: pointer;
 
-    transition:
+    /*transition:
         width 0.3s,
         height 0.3s,
         border-radius 0.4s ease-in,
         background 0.2s,
-        border-color 0.4s;
+        border-color 0.4s;*/
 }
 
-button:focus {
+button:focus,
+button:hover {
     outline: none;
+    border-color: red;
 }
 
 button.fullscreen {
-    width: 100%;
-    height: 100%;
+    border: none;
+
     border-radius: 0;
-    background: black;
-    border-color: black;
+    background: transparent;
 }
