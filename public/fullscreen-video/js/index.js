@@ -14,11 +14,17 @@ const fullscreenVideo = {
         view : (vnode) =>
             m("span", { class : vnode.state.fullscreen() ? "fullscreen" : "" },
                 m("button", {
-                    class : vnode.state.fullscreen() ? "fullscreen" : "",
+                    class : vnode.state.fullscreen() ? "play playFs" : "play",
                     onclick : (e) => {
                         vnode.state.fullscreen(true);
                     }
-                }, "play")
+                }, "play"),
+                vnode.state.fullscreen() ? [
+                    m("button", { class : "close" }, "✕"),
+                    m("div", { class : "video" },
+                        m("iframe")
+                    )
+                ] : null
             )
     };
 

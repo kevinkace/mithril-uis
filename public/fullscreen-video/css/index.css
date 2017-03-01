@@ -17,6 +17,7 @@ span.fullscreen {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 
     animation: 0.4s fs forwards ease-in;
 }
@@ -25,6 +26,7 @@ span.fullscreen {
     0% {
         width: 6em;
         height: 6em;
+        border: solid 3px red;
         border-radius: 50%;
         background: transparent;
     }
@@ -44,7 +46,7 @@ span.fullscreen {
     }
 }
 
-button {
+.play {
     width: 6em;
     height: 6em;
 
@@ -55,24 +57,66 @@ button {
     font-size: 2em;
 
     cursor: pointer;
-
-    /*transition:
-        width 0.3s,
-        height 0.3s,
-        border-radius 0.4s ease-in,
-        background 0.2s,
-        border-color 0.4s;*/
 }
 
-button:focus,
-button:hover {
+.play:focus,
+.play:hover {
     outline: none;
     border-color: red;
 }
 
-button.fullscreen {
+.playFs {
     border: none;
+    position: absolute;
 
-    border-radius: 0;
+    animation: 0.4s forwards play;
+}
+
+@keyframes play {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        display: inline;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+
+    color: white;
+    font-size: 1.3em;
+
+    opacity: 0.7;
+
+    border: none;
     background: transparent;
+    cursor: pointer;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+.video {
+    animation: 0.4s video forwards ease-in;
+}
+
+iframe {
+    border: none;
+}
+
+@keyframes video {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
