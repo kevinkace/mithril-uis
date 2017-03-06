@@ -27,7 +27,14 @@ const fullscreenVideo = {
                 }, "play"),
                 vnode.state.fullscreen() ? [
                     m("button", { class : "close" }, "✕"),
-                    m("div", { class : "video" },
+                    m("div", {
+                            class : "video",
+                            oncreate : (vnode) => {
+                                setTimeout(() => {
+                                    vnode.dom.webkitRequestFullscreen();
+                                }, 300);
+                            }
+                        },
                         m.trust(`<iframe width="${vnode.state.width}" height="${vnode.state.height}" src="https://www.youtube.com/embed/WqgGIrGnhbo?autoplay=1" frameborder="0" allowfullscreen></iframe>`)
                     )
                 ] : null
