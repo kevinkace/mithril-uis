@@ -1,7 +1,5 @@
 "use strict";
 
-const l = console.log;
-
 const fullscreenVideo = {
         fullscreen : (vnode, state) => {
             if(typeof state !== "undefined") {
