@@ -1,5 +1,7 @@
 "use strict";
 
+const l = console.log;
+
 const fullscreenVideo = {
         fullscreen : (vnode, state) => {
             if(typeof state !== "undefined") {
@@ -13,6 +15,14 @@ const fullscreenVideo = {
 
             vnode.state.width = window.innerWidth - 20;
             vnode.state.height = window.innerHeight - 20;
+
+            document.addEventListener("keydown", (e) => {
+                if(e.keyCode === 27) {
+                    vnode.state.fullscreen(false);
+
+                    m.redraw();
+                }
+            });
         },
         view : (vnode) =>
             m("span", { class : vnode.state.fullscreen() ? "fullscreen" : "" },
@@ -26,7 +36,12 @@ const fullscreenVideo = {
                     }
                 }, "play"),
                 vnode.state.fullscreen() ? [
-                    m("button", { class : "close" }, "✕"),
+                    m("button", {
+                            class : "close",
+                            onclick : (e) => {
+                                vnode.state.fullscreen(false);
+                            }
+                        }, "✕"),
                     m("div", {
                             class : "video",
                             oncreate : (vnode) => {
