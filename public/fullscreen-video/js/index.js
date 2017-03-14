@@ -60,6 +60,7 @@ const fullscreenVideo = {
                                     console.log("iframe");
                                     vnode.state.player = m("iframe", {
                                         oninit : () => console.log(vnode.state.player),
+
                                         id              : vnode.state.id,
                                         width           : vnode.state.width,
                                         height          : vnode.state.height,
@@ -68,6 +69,7 @@ const fullscreenVideo = {
                                         allowfullscreen : ""
                                     });
                                 }
+
                                 if(vnode.state.player && vnode.state.target) {
                                     vnode.state.target.playVideo();
 
