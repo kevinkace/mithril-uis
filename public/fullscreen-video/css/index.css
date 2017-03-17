@@ -105,6 +105,8 @@ span.fullscreen {
 }
 
 .video {
+    color: #fff;
+    background: #000;
     animation: 0.4s video forwards ease-in;
 }
 
