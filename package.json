@@ -4,7 +4,7 @@
   "description": "Some examples/starting points for UIs built with [Mithril](https://github.com/lhorie/mithril.js).",
   "main": "index.js",
   "scripts": {
-    "start ": "http-server"
+    "start": "http-server"
   },
   "repository": {
     "type": "git",
