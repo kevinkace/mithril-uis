@@ -1,0 +1,23 @@
+{
+  "name": "mithril-uis",
+  "version": "1.0.0",
+  "description": "Some examples/starting points for UIs built with [Mithril](https://github.com/lhorie/mithril.js).",
+  "main": "index.js",
+  "scripts": {
+    "start ": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinkace/mithril-uis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinkace/mithril-uis/issues"
+  },
+  "homepage": "https://github.com/kevinkace/mithril-uis#readme",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  }
+}

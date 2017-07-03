@@ -1,0 +1,52 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  background: #112;
+}
+
+#mount {
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  padding: 1em;
+}
+
+.jump {
+  display: inline-block;
+  background: grey;
+  padding: 1em;
+  color: white;
+}
+
+.item {
+  position: relative;
+}
+
+.cta {
+  display: block;
+  color: white;
+  background: #012;
+  padding: 1em;
+  border: solid 1px white;
+  border-top: none;
+}
+
+.cta:first-child {
+  border-top: solid 1px white;
+}
+
+.cta {
+  cursor: pointer;
+}
+
+.show {
+  max-height: 0;
+  overflow: hidden;
+
+  transition: max-height 0.4s;
+  background: #def;
+}
+
+.cont {
+    padding: 1em;
+}
